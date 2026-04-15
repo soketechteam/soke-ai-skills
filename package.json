@@ -1,0 +1,25 @@
+{
+  "name": "soke-ai-skills",
+  "version": "1.0.0",
+  "description": "Soke AI Skills Collection",
+  "type": "module",
+  "workspaces": [
+    "soke-ai-exam-skill",
+    "soke-ai-report-skill"
+  ],
+  "scripts": {
+    "install:all": "npm install"
+  },
+  "keywords": [
+    "openclaw",
+    "ai",
+    "skills"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^17.3.1",
+    "form-data": "^4.0.0"
+  }
+}
