@@ -1,0 +1,18 @@
+{
+  "name": "ai-exam-skill",
+  "version": "1.0.0",
+  "description": "AI智能出题考试系统 OpenClaw Skill",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "openclaw",
+    "ai",
+    "exam",
+    "skill"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,95 @@
+{
+  "name": "soke-ai-exam",
+  "version": "1.0.0",
+  "description": "AI智能出题考试系统 - 基于文档自动生成考试、指派学员并查询结果",
+  "author": "Soke AI Team",
+  "main": "index.js",
+  "type": "module",
+  "tools": [
+    {
+      "name": "createAndAssignExam",
+      "description": "创建AI考试并指派给学员。上传文档后自动生成试题，支持按用户名或部门名指派考试",
+      "parameters": {
+        "filePath": {
+          "type": "string",
+          "description": "考试文档的本地路径",
+          "required": true
+        },
+        "examTitle": {
+          "type": "string",
+          "description": "考试标题",
+          "required": true
+        },
+        "questionTypes": {
+          "type": "array",
+          "description": "题型配置数组，如 [{type: 'danxuan', count: 10}, {type: 'duoxuan', count: 5}]",
+          "required": true
+        },
+        "creatorUserId": {
+          "type": "string",
+          "description": "创建者用户ID",
+          "required": true
+        },
+        "creatorUserName": {
+          "type": "string",
+          "description": "创建者用户名",
+          "required": true
+        },
+        "assignUserNames": {
+          "type": "array",
+          "description": "要指派的用户名列表",
+          "required": false
+        },
+        "assignDeptNames": {
+          "type": "array",
+          "description": "要指派的部门名列表",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "queryExamResult",
+      "description": "查询单个学员的考试结果",
+      "parameters": {
+        "examId": {
+          "type": "string",
+          "description": "考试ID",
+          "required": true
+        },
+        "userName": {
+          "type": "string",
+          "description": "学员用户名",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "queryBatchExamResults",
+      "description": "批量查询多个学员的考试结果",
+      "parameters": {
+        "examId": {
+          "type": "string",
+          "description": "考试ID",
+          "required": true
+        },
+        "userNames": {
+          "type": "array",
+          "description": "学员用户名列表",
+          "required": true
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^17.3.1",
+    "form-data": "^4.0.0"
+  },
+  "environment": {
+    "BASE_URL": "https://opendev.soke.cn",
+    "APP_KEY": "required",
+    "APP_SECRET": "required",
+    "CORP_ID": "required",
+    "DEPT_USER_ID": "required"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "soke-ai-report",
+  "version": "1.0.0",
+  "description": "员工学习进度分析系统 - 查询学习档案、分析进度并提供改进建议",
+  "author": "Soke AI Team",
+  "main": "index.js",
+  "type": "module",
+  "tools": [
+    {
+      "name": "analyzeLearningProgress",
+      "description": "分析员工学习进度。支持按用户名、部门名或新员工筛选，自动计算完成率、通过率并提供评级和建议",
+      "parameters": {
+        "userName": {
+          "type": "string",
+          "description": "要查询的用户名",
+          "required": false
+        },
+        "deptName": {
+          "type": "string",
+          "description": "要查询的部门名",
+          "required": false
+        },
+        "isNewEmployee": {
+          "type": "boolean",
+          "description": "是否只查询新员工",
+          "required": false
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^17.3.1"
+  },
+  "environment": {
+    "BASE_URL": "https://opendev.soke.cn",
+    "APP_KEY": "required",
+    "APP_SECRET": "required",
+    "CORP_ID": "required"
+  }
+}

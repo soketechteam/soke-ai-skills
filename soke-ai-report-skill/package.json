@@ -1,0 +1,18 @@
+{
+  "name": "soke-ai-report-skill",
+  "version": "1.0.0",
+  "description": "Learning Progress Analyzer Skill",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "openclaw",
+    "ai",
+    "learning",
+    "skill"
+  ],
+  "author": "",
+  "license": "MIT"
+}
